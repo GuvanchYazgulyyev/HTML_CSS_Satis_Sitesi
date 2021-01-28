@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+<link href = "https://fonts.googleapis.com/css2? family = Andika + Yeni + Temel & display = swap" rel = "stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Ürün Detay Sayfası</title>
+</head>
+<body>
+
+
+
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="img/berkarar.png"  width="90px" height="50px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Ürünler</a></li>
+                    <li><a href="#">Hakkımızda</a></li>
+                    <li><a href="#">İletişim</a></li>
+                    <li><a href="#">Yardım</a></li>
+                    <li><a href="#">Hesap</a></li>
+                </ul>
+            </nav>
+            <img src="img/spt.png" width="30px" height="30px">
+            <img src="img/logo.png"class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+    
+
+    <!--------------------------Account Sayfası---------account-page----->  
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="img/img1.jpg" width="100%">
+                </div>
+
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Giriş</span>
+                            <span  onclick="islemler()">İşlemleri</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Kullanıcı Adı...">
+                            <input type="password" placeholder="Şifre...">
+                            <button type="submit" class="btn">Giriş</button>
+                            <a href="">Şifremi Unuttum.</a>
+                        </form>
+
+
+                        <form id="RegForm">
+                            <input type="text" placeholder="Kullanıcı Adı...">
+                            <input type="email" placeholder="Email...">
+                            <input type="password" placeholder="Şifre...">
+                            <button type="submit" class="btn">Kayıt Ol</button>
+                           
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!---------Foter------------>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Uygulamamızı Indirin</h3>
+                <p>Android ve ios mobil iştetim sistemleri için.</p>
+                <div class="app-logo">
+                    <img src="img/unnamed.png" alt="">
+                    <img src="img/loooggoo.png" alt="">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="img/logo1.png">
+                <p>Kadınlar ve erkekler için TMShop online'daki son trendler. Her hafta yeni gelenlere, moda kataloglarına,
+                     koleksiyonlara ve kıyafet kataloglarına ulaşın.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Kullanışlı Link</h3>
+                <ul>
+                    <li>Kupunlar</li>
+                    <li>Güncel Paylaşımlar</li>
+                    <li>Gizlilik Politikası</li>
+                    <li>Ortaklıga Katıl</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Sosyal Medyak</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copiright">Copyright 2020- Guvanç Yazgulyyev</p>
+
+    </div>
+</div>
+
+<!--------Js for toggle menu-->
+<script>
+    var MenuItems=document.getElementById("MenuItems");
+    MenuItems.style.maxHeight="0px";
+    function menutoggle(){
+        if(MenuItems.style.maxHeight=="0px"){
+            MenuItems.style.maxHeight="200px";
+        }
+        else{
+            MenuItems.style.maxHeight="0px";
+        }
+    }
+</script>
+
+ <!-------------islemler-----Indicator--------Account Sayfası---------account-page----->  
+ <script>
+     var LoginForm=document.getElementById("LoginForm");
+     var RegForm=document.getElementById("RegForm");
+     var Indicator=document.getElementById("Indicator");
+
+     function islemler(){
+         RegForm.style.transform="translateX(0px)";
+         LoginForm.style.transform="translateX(0px)";
+         Indicator.style.transform="translateX(100px)";
+     }
+
+     function login(){
+         RegForm.style.transform="translateX(300px)";
+         LoginForm.style.transform="translateX(300px)";
+         Indicator.style.transform="translateX(0px)";
+     }
+ </script>
+</body>
+</html>
